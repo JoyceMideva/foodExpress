@@ -5,6 +5,7 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Signupscreen from './src/screens/Signupscreen';
 import Homescreen from './src/screens/Homescreen';
+import Categoryscreen from './src/screens/Categoryscreen';
 
 // import { Data } from './src/data';
 const slides = [
@@ -85,6 +86,8 @@ const App = () => {
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Homescreen} />
         <Stack.Screen name="Signup" component={Signupscreen} />
+        <Stack.Screen name="Category" component={Categoryscreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
