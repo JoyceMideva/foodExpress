@@ -68,4 +68,80 @@ export  const Data = [
     ],
   },
 
+  {
+    categoryName: 'Salads',
+    categoryImage:require("../assets/desserts.png"),
+    foods: [
+      {
+        foodName: 'chocolate cake',
+        description:'cake flavoured with melted chocolate ,cocoa powder or both',
+        image:require("../assets/chocolate-cake.png"),
+        price: 1299,
+      },
+      {
+        foodName: 'Apple Pie',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/Apple-Pie.png"),
+        price: 1090,
+      },
+      {
+        foodName: 'Apple Pie',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/Apple-Pie.png"),
+        price: 1090,
+      },
+      
+    ],
+  },
+  {
+    categoryName: 'Beverages',
+    categoryImage:require("../assets/desserts.png"),
+    foods: [
+      {
+        foodName: 'Tea',
+        description:'cake flavoured with melted chocolate ,cocoa powder or both',
+        image:require("../assets/chocolate-cake.png"),
+        price: 1299,
+      },
+      {
+        foodName: 'Uji',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/Apple-Pie.png"),
+        price: 1090,
+      },
+      {
+        foodName: 'Coffee',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/Apple-Pie.png"),
+        price: 1090,
+      },
+      
+    ],
+  },
+  {
+    categoryName: 'Local Foods',
+    categoryImage:require("../assets/desserts.png"),
+    foods: [
+      {
+        foodName: 'Fish Stew',
+        description:'cake flavoured with melted chocolate ,cocoa powder or both',
+        image:require("../assets/chocolate-cake.png"),
+        price: 1299,
+      },
+      {
+        foodName: 'Ugali Beef',
+        description:'Ugali, also known as posho, sima, and other names, is a type of corn meal made from maize or corn flour in several countries in Africa. It is cooked in boiling water or milk until it reaches a stiff or firm dough-like consistency.',
+        image:require("../assets/ugali.jpg"),
+        price: 1090,
+      },
+      {
+        foodName: ' Beef Pilau',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/pilau.jpg"),
+        price: 1090,
+      },
+      
+    ],
+  },
+
 ];
