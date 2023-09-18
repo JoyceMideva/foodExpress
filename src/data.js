@@ -95,7 +95,7 @@ export  const Data = [
   },
   {
     categoryName: 'Beverages',
-    categoryImage:require("../assets/desserts.png"),
+    categoryImage:require("../assets/beverages.png"),
     foods: [
       {
         foodName: 'Tea',
@@ -120,7 +120,7 @@ export  const Data = [
   },
   {
     categoryName: 'Local Foods',
-    categoryImage:require("../assets/desserts.png"),
+    categoryImage:require("../assets/localfood.png"),
     foods: [
       {
         foodName: 'Fish Stew',
