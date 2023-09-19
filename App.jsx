@@ -87,6 +87,8 @@ const App = () => {
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Homescreen} />
         <Stack.Screen name="Signup" component={Signupscreen} />
+                <Stack.Screen name="Login" component={Loginscreen} />
+
         <Stack.Screen name="Category" component={Categoryscreen} />
         <Stack.Screen name="Singlefood" component={Singlefoodscreen} />
 

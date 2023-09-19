@@ -7,10 +7,10 @@ import {
   View,
 } from 'react-native';
 import {Data} from '../data';
-import gender from '../../assets/gender.png';
+import gender from '../../assets/avatar-2.png';
 import githeri from '../../assets/githeri.jpg';
 import pilau from '../../assets/pilau.jpg';
-
+import {ShoppingCartOutlined } from "@ant-design/icons"
 const Homescreen = ({navigation}) => {
   // console.log(Data);
   return (
@@ -20,14 +20,14 @@ const Homescreen = ({navigation}) => {
           <View className="flex justify-between flex-row items-center gap-10">
             <Image
               source={gender}
-              className="h-[50px] w-[50px] bg-[#ff7356] rounded-full"
+              className="h-[50px] w-[50px] rounded-full"
             />
             <View>
               <Text className="font-bold text-lg">Hi Doe</Text>
               <Text>Lets grab your food</Text>
             </View>
           </View>
-          <Text>cart</Text>
+          <ShoppingCartOutlined />
         </View>
         <TextInput
           className="border-2 rounded-md mt-3 border-gray-300"
@@ -38,14 +38,16 @@ const Homescreen = ({navigation}) => {
         <Text className="text-3xl text-[#ff7356] text-center">
           Food Categories
         </Text>
+        <View className=" flex items-center flex-wrap flex-row  justify-between ">
+
         {Data.map(data => {
           return (
-            <View>
+            <View className=" w-[30%] ">
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate('Category', {foods: data.foods})
                 }>
-                <View className=" flex items-center  justify-between ">
+                <View >
                   <Image
                     source={data.categoryImage}
                     className="h-[50px] w-[50px] p-4 bg-slate-300 rounded-full"
@@ -57,6 +59,8 @@ const Homescreen = ({navigation}) => {
             </View>
           );
         })}
+            </View>
+
         <View>
           <Text className="text-3xl text-black font-bold">Food For You</Text>
           <View className="flex items-center justify-center gap-9">

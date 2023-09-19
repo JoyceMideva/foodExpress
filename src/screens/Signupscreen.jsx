@@ -1,32 +1,62 @@
 import {useState} from 'react';
-import {View, Text, Image, TextInput, Button} from 'react-native';
-import auth from '@react-native-firebase/auth';
+import {View, Text, Image, TextInput, Button, TouchableOpacity} from 'react-native';
+import {app,db} from '../firebase';
+import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+import {collection, addDoc, doc, setDoc} from 'firebase/firestore';
 
 const Signupscreen = () => {
-  const [text, setText] = useState('');
+  const [email, setEmail] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+
   const [password, setPassword] = useState('');
-  const [authenticated, setAuthenticated] = useState(false);
+  const auth = getAuth(app);
 
-  auth().createUserWithEmailAndPassword('mideva061@gmail.com', 'mi@1955de');
-
-  const createUser = (email, password) => {
-    try {
-      auth().createUserWithEmailAndPassword(email, password);
-    } catch (error) {
-      alert(error);
-    }
+  const handleSignUp = async () => {
+    createUserWithEmailAndPassword(auth, email, password).then(userDetails => {
+      const user = userDetails.user;
+      setDoc(doc(db, "users", user.uid), {
+          firstname,
+          lastname,
+          email,
+          password,
+        });
+Navigation.navigate("Login")
+    });
+    
   };
 
   return (
-    // {createUser={createUser}}
     <View className="p-[10em]">
+      <Text className="text-center font-bold text-black text-2xl">
+        CREATE AN ACCOUNT
+      </Text>
+
+      <TextInput
+        className="border-2 rounded-md mt-3 border-gray-300"
+        style={{height: 40}}
+        placeholder="First name"
+        type="text"
+        onChangeText={newFirstname => setFirstname(newFirstname)}
+        defaultValue={firstname}
+      />
+
+      <TextInput
+        className="border-2 rounded-md mt-3 border-gray-300"
+        style={{height: 40}}
+        placeholder="Last name"
+        type="text"
+        onChangeText={newLastname => setLastname(newLastname)}
+        defaultValue={lastname}
+      />
+
       <TextInput
         className="border-2 rounded-md mt-3 border-gray-300"
         style={{height: 40}}
         placeholder="Email Address"
         type="email"
-        onChangeText={newText => setText(newText)}
-        defaultValue={text}
+        onChangeText={newEmail => setEmail(newEmail)}
+        defaultValue={email}
       />
       <TextInput
         className="border-2 border-gray-300  rounded-md mt-3 mb-3"
@@ -37,18 +67,12 @@ const Signupscreen = () => {
         defaultValue={password}
       />
 
-      <Button
+    <Button
         onPress={() => {
-          console.log("Signedup");
+          handleSignUp();
         }}
         title="Signup"
-      />
-      <Button
-        onPress={() => {
-          console.log("loggedin")
-        }}
-        title="Login"
-      />
+      /> 
     </View>
   );
 };

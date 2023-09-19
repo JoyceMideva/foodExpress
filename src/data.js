@@ -10,6 +10,36 @@ export  const Data = [
         price: 599,
       },
       {
+        foodName: 'Mozzarella Sticks',
+        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
+        image:require("../assets/mozzarela.png"),
+        price: 599,
+      },
+      {
+        foodName: 'Mozzarella Sticks',
+        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
+        image:require("../assets/mozzarela.png"),
+        price: 599,
+      },
+      {
+        foodName: 'Mozzarella Sticks',
+        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
+        image:require("../assets/mozzarela.png"),
+        price: 599,
+      },
+      {
+        foodName: 'Mozzarella Sticks',
+        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
+        image:require("../assets/mozzarela.png"),
+        price: 599,
+      },
+      {
+        foodName: 'Mozzarella Sticks',
+        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
+        image:require("../assets/mozzarela.png"),
+        price: 599,
+      },
+      {
         foodName: 'Spinach Dip',
         description:'A classic appetizer with creamy and comforting flavors.Spinach,cheese and seasonings creates a delicious dip!',
         image:require("../assets/spinach-dip.png"),
@@ -70,7 +100,7 @@ export  const Data = [
 
   {
     categoryName: 'Salads',
-    categoryImage:require("../assets/desserts.png"),
+    categoryImage:require("../assets/salads.jpg"),
     foods: [
       {
         foodName: 'chocolate cake',
@@ -125,7 +155,7 @@ export  const Data = [
       {
         foodName: 'Fish Stew',
         description:'cake flavoured with melted chocolate ,cocoa powder or both',
-        image:require("../assets/chocolate-cake.png"),
+        image:require("../assets/mtura.jpg"),
         price: 1299,
       },
       {
@@ -137,7 +167,7 @@ export  const Data = [
       {
         foodName: ' Beef Pilau',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/pilau.jpg"),
+        image:require("../assets/african-pilau.jpg"),
         price: 1090,
       },
       
