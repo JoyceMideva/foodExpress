@@ -7,8 +7,14 @@ import Signupscreen from './src/screens/Signupscreen';
 import Homescreen from './src/screens/Homescreen';
 import Categoryscreen from './src/screens/Categoryscreen';
 import Singlefoodscreen from './src/screens/Singlefoodscreen';
+import Loginscreen from './src/screens/Loginscreen';
+import Cartscreen from './src/screens/Cartscreen';
+import State from './src/context/State';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Menuscreen from './src/screens/Menuscreen';
+import Profilescreen from './src/screens/Profilescreen';
 
-import { Data } from './src/data';
+// import { Data } from './src/data';
 const slides = [
   {
     id: 1,
@@ -81,19 +87,42 @@ const App = () => {
       />
     );
   }
+  
 
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+  const Tab = createBottomTabNavigator();
+
+
+
+  function stackNavigator(){
+
+<Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Homescreen} />
         <Stack.Screen name="Signup" component={Signupscreen} />
                 <Stack.Screen name="Login" component={Loginscreen} />
+                <Stack.Screen name="Cart" component={Cartscreen} />
 
         <Stack.Screen name="Category" component={Categoryscreen} />
         <Stack.Screen name="Singlefood" component={Singlefoodscreen} />
 
       </Stack.Navigator>
+  }
+  function tabNavigator(){
+    return (
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Homescreen} />
+        <Tab.Screen name="Cart" component={Cartscreen} />
+        <Tab.Screen name="Profile" component={Profilescreen} />
+        <Tab.Screen name="Menu" component={Menuscreen} />
+      </Tab.Navigator>
+    );
+  }
+
+  return (
+    <State>
+    <NavigationContainer>
+      
     </NavigationContainer>
+    </State>
   );
 };
 export default App;

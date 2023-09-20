@@ -3,7 +3,7 @@ import {View, Text, Image, TextInput, Button, TouchableOpacity} from 'react-nati
 import {app} from '../firebase';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-const Loginscreen = () => {
+const Loginscreen = ({navigation}) => {
   const [email, setEmail] = useState('');
  
 

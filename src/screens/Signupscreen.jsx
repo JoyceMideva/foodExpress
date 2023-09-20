@@ -4,7 +4,7 @@ import {app,db} from '../firebase';
 import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
 import {collection, addDoc, doc, setDoc} from 'firebase/firestore';
 
-const Signupscreen = () => {
+const Signupscreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
@@ -21,7 +21,7 @@ const Signupscreen = () => {
           email,
           password,
         });
-Navigation.navigate("Login")
+navigation.navigate("Login")
     });
     
   };

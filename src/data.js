@@ -3,6 +3,8 @@ export  const Data = [
     categoryName: 'Appetizers',
     categoryImage:require("../assets/appetizers.png"),
     foods: [
+      
+      
       {
         foodName: 'Mozzarella Sticks',
         description:'Fried Mozzarella cheese sticks served with marinara sauce.',
@@ -16,27 +18,15 @@ export  const Data = [
         price: 599,
       },
       {
-        foodName: 'Mozzarella Sticks',
+        foodName: 'spinach dip',
         description:'Fried Mozzarella cheese sticks served with marinara sauce.',
-        image:require("../assets/mozzarela.png"),
+        image:require("../assets/spinach-dip.png"),
         price: 599,
       },
       {
-        foodName: 'Mozzarella Sticks',
+        foodName: 'Kanchumbari',
         description:'Fried Mozzarella cheese sticks served with marinara sauce.',
-        image:require("../assets/mozzarela.png"),
-        price: 599,
-      },
-      {
-        foodName: 'Mozzarella Sticks',
-        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
-        image:require("../assets/mozzarela.png"),
-        price: 599,
-      },
-      {
-        foodName: 'Mozzarella Sticks',
-        description:'Fried Mozzarella cheese sticks served with marinara sauce.',
-        image:require("../assets/mozzarela.png"),
+        image:require("../assets/kanchumbari.jpg"),
         price: 599,
       },
       {
@@ -94,7 +84,18 @@ export  const Data = [
         image:require("../assets/Apple-Pie.png"),
         price: 1090,
       },
-      
+      {
+        foodName: 'Cream shake',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/cream.jpg"),
+        price: 1090,
+      },
+      {
+        foodName: 'Chocolate shake',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/chocolate.jpg"),
+        price: 1090,
+      },
     ],
   },
 
@@ -103,24 +104,41 @@ export  const Data = [
     categoryImage:require("../assets/salads.jpg"),
     foods: [
       {
-        foodName: 'chocolate cake',
+        foodName: 'Kale salad',
         description:'cake flavoured with melted chocolate ,cocoa powder or both',
-        image:require("../assets/chocolate-cake.png"),
+        image:require("../assets/kale-salad.webp"),
         price: 1299,
       },
       {
-        foodName: 'Apple Pie',
+        foodName: 'Loaded Brocolli Salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/Apple-Pie.png"),
+        // image:require("../assets/watermelon-salad.webp"),
         price: 1090,
       },
       {
-        foodName: 'Apple Pie',
+        foodName: 'Stone Fruit Salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/Apple-Pie.png"),
+        image:require("../assets/stone-fruit-salad.png"),
         price: 1090,
       },
-      
+      {
+        foodName: 'Strawberry Burata salad',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        // image:require("../assets/strawberry-Burrata-salad.webp"),
+        price: 1090,
+      },
+      {
+        foodName: 'Shaved beet and carrot salad',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        // image:require("../assets/Shaved-beet-and-carrot-salad.webp"),
+        price: 1090,
+      },
+      {
+        foodName: 'Watermelon Salad',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        // image:require("../assets/watermelon-salad.webp"),
+        price: 1090,
+      },
     ],
   },
   {
@@ -130,19 +148,37 @@ export  const Data = [
       {
         foodName: 'Tea',
         description:'cake flavoured with melted chocolate ,cocoa powder or both',
-        image:require("../assets/chocolate-cake.png"),
+        image:require("../assets/tea.jpeg"),
         price: 1299,
       },
       {
-        foodName: 'Uji',
+        foodName: 'Iced Tea',
+        description:'cake flavoured with melted chocolate ,cocoa powder or both',
+        image:require("../assets/iced-tea.jpeg"),
+        price: 1299,
+      },
+      {
+        foodName: 'Lemonade',
+        description:'cake flavoured with melted chocolate ,cocoa powder or both',
+        image:require("../assets/lemonade.jpeg"),
+        price: 1299,
+      },
+      {
+        foodName: 'Juice',
+        description:'cake flavoured with melted chocolate ,cocoa powder or both',
+        image:require("../assets/juice.jpeg"),
+        price: 1299,
+      },
+      {
+        foodName: 'Vanilla milkshake',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/Apple-Pie.png"),
+        image:require("../assets/vanilla.png"),
         price: 1090,
       },
       {
         foodName: 'Coffee',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/Apple-Pie.png"),
+        image:require("../assets/coffee.jpeg"),
         price: 1090,
       },
       
@@ -153,7 +189,7 @@ export  const Data = [
     categoryImage:require("../assets/localfood.png"),
     foods: [
       {
-        foodName: 'Fish Stew',
+        foodName: 'Mtura',
         description:'cake flavoured with melted chocolate ,cocoa powder or both',
         image:require("../assets/mtura.jpg"),
         price: 1299,
@@ -168,6 +204,24 @@ export  const Data = [
         foodName: ' Beef Pilau',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
         image:require("../assets/african-pilau.jpg"),
+        price: 1090,
+      },
+      {
+        foodName: 'Mokimo',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/mokimo.jpg"),
+        price: 1090,
+      },
+      {
+        foodName: ' Githeri',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/githeri.jpg"),
+        price: 1090,
+      },
+      {
+        foodName: 'Pilau',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/pilau.jpg"),
         price: 1090,
       },
       

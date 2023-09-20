@@ -10,7 +10,7 @@ import {Data} from '../data';
 import gender from '../../assets/avatar-2.png';
 import githeri from '../../assets/githeri.jpg';
 import pilau from '../../assets/pilau.jpg';
-import {ShoppingCartOutlined } from "@ant-design/icons"
+// import {ShoppingCartOutlined } from "@ant-design/icons"
 const Homescreen = ({navigation}) => {
   // console.log(Data);
   return (
@@ -27,7 +27,7 @@ const Homescreen = ({navigation}) => {
               <Text>Lets grab your food</Text>
             </View>
           </View>
-          <ShoppingCartOutlined />
+          <Text>cart</Text>
         </View>
         <TextInput
           className="border-2 rounded-md mt-3 border-gray-300"
@@ -63,8 +63,8 @@ const Homescreen = ({navigation}) => {
 
         <View>
           <Text className="text-3xl text-black font-bold">Food For You</Text>
-          <View className="flex items-center justify-center gap-9">
-            <View className="border-2">
+          <View className="flex items-center justify-center flex-row gap-9">
+            <View className="shadow-">
               <Image
                 source={githeri}
                 className=" h-[200px] w-[200px]"

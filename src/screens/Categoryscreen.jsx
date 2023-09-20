@@ -3,7 +3,7 @@ const Categoryscreen = ({route,navigation}) => {
   const {foods} = route.params;
 //   console.log(foods);
   return (
-    <View className="flex flex-wrap flex-row gap-4">
+    <View className="flex flex-wrap flex-row gap-4 w-[45%]">
 
       <ScrollView>
     <View >
