@@ -6,84 +6,110 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import clock from '../../assets/clock.svg';
+import star from '../../assets/star.png';
 import {Data} from '../data';
 import gender from '../../assets/avatar-2.png';
 import githeri from '../../assets/githeri.jpg';
-import pilau from '../../assets/pilau.jpg';
-// import {ShoppingCartOutlined } from "@ant-design/icons"
+import pilau from '../../assets/african-pilau.jpg';
+import cart from '../../assets/shopping-cart.png';
+import lens from '../../assets/lens.png';
+
 const Homescreen = ({navigation}) => {
-  // console.log(Data);
   return (
-    <ScrollView>
-      <View>
-        <View className="flex justify-start flex-row items-center gap-10">
-          <View className="flex justify-between flex-row items-center gap-10">
-            <Image
-              source={gender}
-              className="h-[50px] w-[50px] rounded-full"
-            />
-            <View>
+    <ScrollView className="bg-white">
+      <View className=" w-[90%] mx-auto">
+        <View className="flex justify-between pt-7 flex-row m-3 items-center gap-10">
+          <View className="flex flex-row">
+            <Image source={gender} className="h-[50px] w-[50px] rounded-full" />
+            <View className="ml-2">
               <Text className="font-bold text-lg">Hi Doe</Text>
               <Text>Lets grab your food</Text>
             </View>
           </View>
-          <Text>cart</Text>
+          <Image source={cart} className="h-[30px] w-[30px]" />
         </View>
+        <View className="flex flex-row m-3 items-center border-2 gap-3 rounded-full  bg-slate-200">
+<Image source={lens}   className="w-[20px] h-[20px]"/>
         <TextInput
-          className="border-2 rounded-md mt-3 border-gray-300"
-          style={{height: 40}}
+          className="  mt-3 outline-none"
+        
           placeholder="Search for food"
           type="text"
         />
-        <Text className="text-3xl text-[#ff7356] text-center">
+        </View>
+        <Text className="text-3xl text-black ">
           Food Categories
         </Text>
         <View className=" flex items-center flex-wrap flex-row  justify-between ">
-
-        {Data.map(data => {
-          return (
-            <View className=" w-[30%] ">
-              <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate('Category', {foods: data.foods})
-                }>
-                <View >
-                  <Image
-                    source={data.categoryImage}
-                    className="h-[50px] w-[50px] p-4 bg-slate-300 rounded-full"
-                    resizeMode="contain"
-                  />
-                  <Text className="text-lg ">{data.categoryName}</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-          );
-        })}
-            </View>
+          {Data.map(data => {
+            return (
+              <View className=" w-[30%] gap-3 ">
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate('Category', {foods: data.foods})
+                  }>
+                  <View>
+                    <Image
+                      source={data.categoryImage}
+                      className="h-[30px] w-[30px] p-10 bg-slate-300 rounded-full "
+                      resizeMode="contain"
+                    />
+                    <Text className="text-lg ">{data.categoryName}</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+            );
+          })}
+        </View>
 
         <View>
           <Text className="text-3xl text-black font-bold">Food For You</Text>
           <View className="flex items-center justify-center flex-row gap-9">
-            <View className="shadow-">
+            <View className="border-[1px] border-gray-300">
               <Image
                 source={githeri}
                 className=" h-[200px] w-[200px]"
                 resizeMode="contain"
               />
-              <Text className="text-2xl text-black ">Githeri Curry</Text>
-              <Text className="text-lg">20 mins</Text>
-              <Text className="text-lg">5.7</Text>
+              <Text className="text-xl text-black ">Githeri Curry</Text>
+              <View className="flex flex-row items-center justify-between gap-6">
+                <View className="flex flex-row items-center">
+                  <Image
+                    source={clock}
+                    resizeMode="contain"
+                    className="w-[20px] h-[20px]"
+                  />
+                  <Text className="text-lg">20 mins</Text>
+                </View>
+                <View className="flex flex-row items-center">
+                  <Image source={star} className="w-[20px] h-[20px]" />
+
+                  <Text className="text-lg">5.7</Text>
+                </View>
+              </View>
               <Text className="text-xl text-black ">Kshs 300</Text>
             </View>
-            <View className="border-2 ">
+            <View className="border-[1px] mr-12 border-gray-300 object-cover">
               <Image
                 source={pilau}
-                className=" h-[200px] w-[200px]"
+                className=" h-[170px] w-[170px] "
                 resizeMode="contain"
               />
-              <Text className="text-2xl text-black ">Beef Pilau</Text>
-              <Text className="text-lg">20 mins</Text>
-              <Text className="text-lg">5.7</Text>
+              <Text className="text-xl  text-black ">Beef Pilau</Text>
+
+              <View className="flex flex-row items-center justify-between gap-6">
+                <View className="flex flex-row items-center">
+                  <Image source={clock} className="w-[20px] h-[20px]" />
+                  <Text className="text-lg">20 mins</Text>
+                </View>
+                <View className="flex flex-row items-center">
+                  <Image source={star} className="w-[20px] h-[20px]" />
+
+                  <Text className="text-lg">5.7</Text>
+                </View>
+              </View>
+
               <Text className="text-xl text-black ">Kshs 300</Text>
             </View>
           </View>

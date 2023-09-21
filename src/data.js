@@ -12,9 +12,9 @@ export  const Data = [
         price: 599,
       },
       {
-        foodName: 'Mozzarella Sticks',
+        foodName: 'Roasted Potatoes',
         description:'Fried Mozzarella cheese sticks served with marinara sauce.',
-        image:require("../assets/mozzarela.png"),
+        image:require("../assets/roastedpotatoes.png"),
         price: 599,
       },
       {
@@ -26,13 +26,13 @@ export  const Data = [
       {
         foodName: 'Kanchumbari',
         description:'Fried Mozzarella cheese sticks served with marinara sauce.',
-        image:require("../assets/kanchumbari.jpg"),
+        image:require("../assets/kanchumbari.png"),
         price: 599,
       },
       {
-        foodName: 'Spinach Dip',
+        foodName: 'Dumpling Sauce',
         description:'A classic appetizer with creamy and comforting flavors.Spinach,cheese and seasonings creates a delicious dip!',
-        image:require("../assets/spinach-dip.png"),
+        image:require("../assets/dumplingsauce.jpg"),
         price: 690,
       },
       {
@@ -96,47 +96,71 @@ export  const Data = [
         image:require("../assets/chocolate.jpg"),
         price: 1090,
       },
+      {
+        foodName: 'Hamburger',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/burger.jpeg"),
+        price: 1090,
+      },
+      {
+        foodName: 'Vanilla shake',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/vanilla.png"),
+        price: 1090,
+      },
+      {
+        foodName: 'Hamburger',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/burger.jpeg"),
+        price: 1090,
+      },
+      {
+        foodName: 'Vanilla shake',
+        description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
+        image:require("../assets/vanilla.png"),
+        price: 1090,
+      },
     ],
   },
 
   {
     categoryName: 'Salads',
-    categoryImage:require("../assets/salads.jpg"),
+    categoryImage:require("../assets/salads.png"),
     foods: [
       {
-        foodName: 'Kale salad',
+        foodName: 'Peanut salad',
         description:'cake flavoured with melted chocolate ,cocoa powder or both',
-        image:require("../assets/kale-salad.webp"),
+        image:require("../assets/peanutsalad.jpg"),
         price: 1299,
       },
       {
-        foodName: 'Loaded Brocolli Salad',
+        foodName: 'Tomato Avocado Salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        // image:require("../assets/watermelon-salad.webp"),
+        image:require("../assets/tomatoavocado.jpg"),
         price: 1090,
       },
       {
-        foodName: 'Stone Fruit Salad',
+        foodName: 'Chicken Salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/stone-fruit-salad.png"),
+        image:require("../assets/chickensalad.jpg"),
         price: 1090,
       },
       {
-        foodName: 'Strawberry Burata salad',
+        foodName: 'Ciliantro salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        // image:require("../assets/strawberry-Burrata-salad.webp"),
+        image:require("../assets/ciliantrosalad.jpg"),
         price: 1090,
       },
       {
-        foodName: 'Shaved beet and carrot salad',
+        foodName: 'Boring salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        // image:require("../assets/Shaved-beet-and-carrot-salad.webp"),
+        image:require("../assets/boringsalad.jpg"),
         price: 1090,
       },
       {
-        foodName: 'Watermelon Salad',
+        foodName: 'Lemon Salad',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        // image:require("../assets/watermelon-salad.webp"),
+        image:require("../assets/lemonsalad.jpg"),
         price: 1090,
       },
     ],
@@ -178,7 +202,7 @@ export  const Data = [
       {
         foodName: 'Coffee',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/coffee.jpeg"),
+        image:require("../assets/coffee.png"),
         price: 1090,
       },
       
@@ -189,15 +213,15 @@ export  const Data = [
     categoryImage:require("../assets/localfood.png"),
     foods: [
       {
-        foodName: 'Mtura',
+        foodName: 'Mokimo',
         description:'cake flavoured with melted chocolate ,cocoa powder or both',
-        image:require("../assets/mtura.jpg"),
+        image:require("../assets/mokimo.png"),
         price: 1299,
       },
       {
         foodName: 'Ugali Beef',
         description:'Ugali, also known as posho, sima, and other names, is a type of corn meal made from maize or corn flour in several countries in Africa. It is cooked in boiling water or milk until it reaches a stiff or firm dough-like consistency.',
-        image:require("../assets/ugali.jpg"),
+        image:require("../assets/ugali.png"),
         price: 1090,
       },
       {
@@ -209,7 +233,7 @@ export  const Data = [
       {
         foodName: 'Mokimo',
         description:'Yammy pie with flaky,buttery crust;tart-sweet apples,and wonderful cinnamon-y aroma',
-        image:require("../assets/mokimo.jpg"),
+        image:require("../assets/mokimo.png"),
         price: 1090,
       },
       {

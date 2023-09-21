@@ -3,7 +3,7 @@ import {View, Text, Image, TextInput, Button, TouchableOpacity} from 'react-nati
 import {app,db} from '../firebase';
 import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
 import {collection, addDoc, doc, setDoc} from 'firebase/firestore';
-
+import logo from "../../assets/food-express-logo.png"
 const Signupscreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [firstname, setFirstname] = useState('');
@@ -31,7 +31,7 @@ navigation.navigate("Login")
       <Text className="text-center font-bold text-black text-2xl">
         CREATE AN ACCOUNT
       </Text>
-
+<Image source={logo} className="w-[250px] h-[150px]"/>
       <TextInput
         className="border-2 rounded-md mt-3 border-gray-300"
         style={{height: 40}}
@@ -67,12 +67,11 @@ navigation.navigate("Login")
         defaultValue={password}
       />
 
-    <Button
+    <TouchableOpacity
         onPress={() => {
           handleSignUp();
         }}
-        title="Signup"
-      /> 
+      ><Text className="bg-[#ff7356] border-2  text-2xl mt-5 rounded-full text-center text-white font-bold py-2 px-4">CREATE ACCOUNT</Text></TouchableOpacity>
     </View>
   );
 };

@@ -10,9 +10,10 @@ import Singlefoodscreen from './src/screens/Singlefoodscreen';
 import Loginscreen from './src/screens/Loginscreen';
 import Cartscreen from './src/screens/Cartscreen';
 import State from './src/context/State';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Menuscreen from './src/screens/Menuscreen';
 import Profilescreen from './src/screens/Profilescreen';
+// import {HomeOutlined} from '@ant-design/icons';
 
 // import { Data } from './src/data';
 const slides = [
@@ -87,31 +88,40 @@ const App = () => {
       />
     );
   }
-  
 
   const Tab = createBottomTabNavigator();
 
-
-
-  function stackNavigator(){
-
-<Stack.Navigator initialRouteName='Home'>
+  function StackNavigator() {
+    return (
+      <Stack.Navigator initialRouteName="Signup">
         <Stack.Screen name="Home" component={Homescreen} />
         <Stack.Screen name="Signup" component={Signupscreen} />
-                <Stack.Screen name="Login" component={Loginscreen} />
-                <Stack.Screen name="Cart" component={Cartscreen} />
+        <Stack.Screen name="Login" component={Loginscreen} />
+        <Stack.Screen name="Cart" component={Cartscreen} />
 
         <Stack.Screen name="Category" component={Categoryscreen} />
         <Stack.Screen name="Singlefood" component={Singlefoodscreen} />
-
       </Stack.Navigator>
+    );
   }
-  function tabNavigator(){
+  function TabNavigator() {
     return (
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Homescreen} />
-        <Tab.Screen name="Cart" component={Cartscreen} />
-        <Tab.Screen name="Profile" component={Profilescreen} />
+      <Tab.Navigator screenOptions={{headerShown: false}}>
+        <Tab.Screen
+          name="Homescreen"
+          component={StackNavigator}
+          options={{
+            tabBarLabel: 'Home',
+          }}
+        />
+        <Tab.Screen name="Cartscreen" component={StackNavigator} />
+        <Tab.Screen
+          name="Profile"
+          component={Profilescreen}
+          options={{
+            tabBarLabel: 'Profile',
+          }}
+        />
         <Tab.Screen name="Menu" component={Menuscreen} />
       </Tab.Navigator>
     );
@@ -119,9 +129,9 @@ const App = () => {
 
   return (
     <State>
-    <NavigationContainer>
-      
-    </NavigationContainer>
+      <NavigationContainer>
+        <TabNavigator />
+      </NavigationContainer>
     </State>
   );
 };
