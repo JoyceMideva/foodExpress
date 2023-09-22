@@ -14,8 +14,24 @@ import githeri from '../../assets/githeri.jpg';
 import pilau from '../../assets/african-pilau.jpg';
 import cart from '../../assets/shopping-cart.png';
 import lens from '../../assets/lens.png';
+import { useContext, useEffect } from 'react';
+import { StateContext } from '../context/State';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Homescreen = ({navigation}) => {
+  const {currentUserId, setCurrentUserId}=useContext(StateContext)
+  const {currentUser, setCurrentUser}=useContext(StateContext)
+
+  useEffect(()=>{
+    const getcurrentUser=async()=>{
+      const docRef=await getDoc(doc(db,"users", currentUserId))
+      setCurrentUser(docRef.data())
+      console.log(currentUser)
+
+    }
+    getcurrentUser()
+  },[])
   return (
     <ScrollView className="bg-white">
       <View className=" w-[90%] mx-auto">
@@ -29,18 +45,15 @@ const Homescreen = ({navigation}) => {
           </View>
           <Image source={cart} className="h-[30px] w-[30px]" />
         </View>
-        <View className="flex flex-row m-3 items-center border-2 gap-3 rounded-full  bg-slate-200">
-<Image source={lens}   className="w-[20px] h-[20px]"/>
-        <TextInput
-          className="  mt-3 outline-none"
-        
-          placeholder="Search for food"
-          type="text"
-        />
+        <View className="flex flex-row m-3 items-center  gap-3 rounded-full  bg-slate-200">
+          <Image source={lens} className="w-[20px] h-[20px]" />
+          <TextInput
+            className="  mt-3 outline-none"
+            placeholder="Search for food"
+            type="text"
+          />
         </View>
-        <Text className="text-3xl text-black ">
-          Food Categories
-        </Text>
+        <Text className="text-3xl text-black ">Food Categories</Text>
         <View className=" flex items-center flex-wrap flex-row  justify-between ">
           {Data.map(data => {
             return (
@@ -96,7 +109,7 @@ const Homescreen = ({navigation}) => {
                 className=" h-[170px] w-[170px] "
                 resizeMode="contain"
               />
-              <Text className="text-xl  text-black ">Beef Pilau</Text>
+              <Text className="text-lg  text-red-500 ">Beef Pilau</Text>
 
               <View className="flex flex-row items-center justify-between gap-6">
                 <View className="flex flex-row items-center">

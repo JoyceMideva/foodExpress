@@ -93,7 +93,7 @@ const App = () => {
 
   function StackNavigator() {
     return (
-      <Stack.Navigator initialRouteName="Signup">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Home" component={Homescreen} />
         <Stack.Screen name="Signup" component={Signupscreen} />
         <Stack.Screen name="Login" component={Loginscreen} />
@@ -114,7 +114,8 @@ const App = () => {
             tabBarLabel: 'Home',
           }}
         />
-        <Tab.Screen name="Cartscreen" component={StackNavigator} />
+        <Tab.Screen name="Menu" component={Menuscreen} />
+        <Tab.Screen name="Carts" component={Cartscreen} />
         <Tab.Screen
           name="Profile"
           component={Profilescreen}
@@ -122,7 +123,6 @@ const App = () => {
             tabBarLabel: 'Profile',
           }}
         />
-        <Tab.Screen name="Menu" component={Menuscreen} />
       </Tab.Navigator>
     );
   }
